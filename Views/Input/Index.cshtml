@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@model InputModel
+<form method="post" asp-controller="Input" asp-action="Index">
+
+   
+
+    <div>
+        <span asp-validation-for="age"></span>
+        <label asp-for="age"></label>
+        <input asp-for="age" />
+    </div>
+
+       <div>
+        <label asp-for="name"></label>
+        <input asp-for="name" />
+    </div>
+
+    <div>
+        <input type="submit" value="送信" />
+    </div>
+</form>
