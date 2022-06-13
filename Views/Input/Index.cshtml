@@ -6,23 +6,25 @@
 <h1>入力フォーム</h1>
 
 @model InputModel
-<form method="post" asp-controller="Input" asp-action="Index">
+<form method="post" asp-controller="Input" asp-action="Index" >
 
    
 
     <div>
         <span asp-validation-for="age"></span>
         <label asp-for="age"></label>
-        <input asp-for="age" />
+        <input asp-for="age"  placeholder="30" id="age"/>
     </div>
 
        <div>
          <span asp-validation-for="name"></span>
         <label asp-for="name"></label>
-        <input asp-for="name" />
+        <input asp-for="name" placeholder="佐藤" id="name"/>
     </div>
 
     <div>
-        <input type="submit" value="送信" />
+        <input type="submit" value="送信" onclick=""/>
     </div>
+
+
 </form>
