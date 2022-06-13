@@ -1,9 +1,9 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "入力フォーム";
 }
 
-<h1>Index</h1>
+<h1>入力フォーム</h1>
 
 @model InputModel
 <form method="post" asp-controller="Input" asp-action="Index">
@@ -17,6 +17,7 @@
     </div>
 
        <div>
+         <span asp-validation-for="name"></span>
         <label asp-for="name"></label>
         <input asp-for="name" />
     </div>

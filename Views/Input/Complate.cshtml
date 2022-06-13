@@ -1,10 +1,15 @@
 ﻿@model InputModel
 <div>
-    <label aps-for="name"></label>
+    <span asp-validation-for="name"></span>
+    <label asp-for="name"></label>
     @Model.name
 </div>
 
 <div>
-    <label aps-for="age"></label>
+    <span asp-validation-for="age"></span>
+    <label asp-for="age"></label>
     @Model.age
 </div>
+
+	<button type="button" class="btn btn-primary w-100 mt-2" value="トップページに戻る">
+

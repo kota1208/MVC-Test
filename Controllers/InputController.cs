@@ -17,6 +17,9 @@ namespace MVC_Test.Controllers
 
         public IActionResult Index(Models.InputModel model)
         {
+
+            string name = model.name;
+
             if (!ModelState.IsValid)
             {
                 return View(model);
