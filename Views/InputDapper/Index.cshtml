@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "dapperInput";
+}
+
+
+@{
+    //共通ページの無効化
+    Layout = "CreateLayoutView";
+}
+
+<h1>DapperInput Form</h1>
+
+<p>test dapper</p>
+
+@model ProductEntity
+<form method="post" asp-controller="InputDapper" asp-action="Index" >
+
+   
+
+    <div>
+        <span asp-validation-for="ProductName"></span>
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName"  placeholder="30" id="age"/>
+    </div>
+
+    
+
+    <div>
+        <input type="submit" value="送信" onclick=""/>
+    </div>
+
+
+</form>

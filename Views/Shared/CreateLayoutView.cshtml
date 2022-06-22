@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        @*jQueryの読み込み*@
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <title>独自共通ページ</title>
+    </head>
+
+    <body>
+
+
+
+
+        <p>top--------------------------------</p>
+        @*この中に各Viewが埋め込まれる*@
+          <div class="container">
+            <main role="main" class="pb-3">
+            @RenderBody()
+            </main>
+           </div>
+
+         <p>border--------------------------------</p>
+         
+    </body>
+</html>

@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Hello}/{action=Index}/{id?}");
+    pattern: "{controller=InputDapper}/{action=Index}/{id?}");
 
 app.Run();
