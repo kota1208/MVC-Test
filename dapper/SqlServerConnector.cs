@@ -9,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hoimi_DapperUdemy.SqlServer
+namespace MVC_Test.dapper
 {
-    public static class ProductSqlServer
+    public static class SqlServerConnector
     {
         private static string _connectionString;
         //static なコンストラクタ
-        static ProductSqlServer()
+        static SqlServerConnector()
         {
             //dbに接続するための接続文字列を作成する
             //MSが簡単に作成できるように用意してくれいる

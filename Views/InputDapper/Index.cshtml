@@ -13,7 +13,7 @@
 <p>test dapper</p>
 
 @model ProductEntity
-<form method="post" asp-controller="InputDapper" asp-action="Index" >
+<form method="post" asp-controller="InputDapper" asp-action="DapperInsert" >
 
    
 
@@ -23,8 +23,18 @@
         <input asp-for="ProductName"  placeholder="30" id="age"/>
     </div>
 
-    
 
+    <div>
+        <input type="submit" value="送信" onclick=""/>
+    </div>
+
+
+</form>
+
+
+
+<form method="post" asp-controller="InputDapper" asp-action="DapperSelect" >
+    <h1>Dapperで表のすべてを取得</h1>
     <div>
         <input type="submit" value="送信" onclick=""/>
     </div>
