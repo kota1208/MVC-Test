@@ -28,5 +28,21 @@ namespace MVC_Test.Controllers
            
             return View("Views/InputDapper/result.cshtml", product);;
         }
+
+        
+        [HttpGet]
+        //CSRF対策用のトークン
+        [ValidateAntiForgeryToken]
+        public IActionResult DapperSelectGet()
+        {
+            //Dapperクラスを別に作成
+            List<ProductEntity> result = ProductDapper.GetProductAll();
+
+            ProductEntity product = result[0];
+
+            ViewBag.result = result;
+
+            return View("Views/InputDapper/result.cshtml", product); ;
+        }
     }
 }

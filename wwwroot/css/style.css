@@ -1,3 +1,22 @@
 ﻿body {
-    background-color:aqua;
+    background-color:beige;
+}
+
+
+/*table, tr, th, td {
+    border: 1px #808080 solid;
+}*/
+
+.showTableClass {
+    border: 1px solid
+}
+
+.showTableCol {
+    border: 10px;
+    border-top-style:outset;
+    border-color:blueviolet;
+}
+
+.showTableRow{
+    border:1px solid;
 }
