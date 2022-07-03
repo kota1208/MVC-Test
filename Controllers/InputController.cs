@@ -13,7 +13,7 @@ namespace MVC_Test.Controllers
 
         [HttpPost]
         //CSRF対策用のトークン
-        [ValidateAntiForgeryToken]
+        [AutoValidateAntiforgeryToken]
 
         public IActionResult Index(Models.InputModel model)
         {
