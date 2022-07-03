@@ -29,20 +29,20 @@ namespace MVC_Test.Controllers
             return View("Views/InputDapper/result.cshtml", product);;
         }
 
-        
+
+
+
         [HttpGet]
-        //CSRF対策用のトークン
-        [ValidateAntiForgeryToken]
-        public IActionResult DapperSelectGet()
+        //CSRF対策用のトークン 有効にするとアクセス時に、エラーになる
+        //[ValidateAntiForgeryToken]
+        public IActionResult GetMethod()
         {
-            //Dapperクラスを別に作成
-            List<ProductEntity> result = ProductDapper.GetProductAll();
+           
 
-            ProductEntity product = result[0];
-
-            ViewBag.result = result;
-
-            return View("Views/InputDapper/result.cshtml", product); ;
+            return View("Views/InputDapper/resultGet.cshtml"); ;
         }
+
+
+
     }
 }
