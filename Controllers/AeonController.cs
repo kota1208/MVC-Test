@@ -8,5 +8,14 @@ namespace MVC_Test.Controllers
         {
             return View("Views/Aeon/Index.cshtml");
         }
+
+
+        //購入した商品をすべて取得する
+        [HttpGet]
+        public static IActionResult ShowBuyItems()
+        {
+
+            return null;
+        }
     }
 }
