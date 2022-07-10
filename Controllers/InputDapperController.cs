@@ -39,7 +39,7 @@ namespace MVC_Test.Controllers
         {
            
 
-            return View("Views/InputDapper/resultGet.cshtml"); ;
+            return View("Views/InputDapper/resultGet.cshtml"); 
         }
 
 
