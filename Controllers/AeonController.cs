@@ -7,7 +7,7 @@ namespace MVC_Test.Controllers
     {
         public IActionResult Index()
         {
-            return View("Views/Aeon/Index.cshtml");
+            return View("Views/Aeon/Index.cshtml"); 
         }
 
 
