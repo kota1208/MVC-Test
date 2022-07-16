@@ -11,9 +11,13 @@ using System.Threading.Tasks;
 
 namespace MVC_Test.dapper
 {
-    public static class SqlServerConnector
+    public class SqlServerConnector
     {
+        //接続文字列
         private static string _connectionString;
+        //コネクションにシングルトンパターンを適用させる
+        static SqlConnection ?connection = null;
+
         //static なコンストラクタ
         static SqlServerConnector()
         {
@@ -29,35 +33,20 @@ namespace MVC_Test.dapper
             //接続文字列の生成
             _connectionString = builder.ToString();
 
-
         }
 
         public static SqlConnection GetConnection()
         {
-            var connection = new SqlConnection(_connectionString);
+            //未接続であればDBに接続を行う
+            if(connection == null)
+            {
+                connection = new SqlConnection(_connectionString);
+
+            }
             return connection;
         }
 
        
-
-        public static void DapperInsert(ProductEntity product)
-        {
-            string sql = @"insert into product(ProductName,productPrice)values(@ProductName,@ProductPrice);";
-
-
-
-            //dbと接続する
-            using (var connection = GetConnection())
-            {
-
-
-                connection.Execute(sql, new
-                {
-                    ProductName = product.ProductName,
-                    ProductPrice = product.ProductPrice,
-                });
-
-            }
-        }
+        
     }
 }

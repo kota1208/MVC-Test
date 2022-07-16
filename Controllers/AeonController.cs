@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC_Test.Models;
 
 namespace MVC_Test.Controllers
 {
@@ -14,6 +15,10 @@ namespace MVC_Test.Controllers
         [HttpGet]
         public static IActionResult ShowBuyItems()
         {
+            //Modelの作成
+            AeionItemsEntity model = new AeionItemsEntity();
+
+
 
             return null;
         }

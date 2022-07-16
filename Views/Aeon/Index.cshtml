@@ -2,4 +2,20 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Title"] = "イオンネットスーパートップ";
 }
+
+
+@{
+    //共通ページの無効化
+    Layout = "CreateLayoutView";
+}
+
+<h1>イオンネットスーパー</h1>
+
+<p>購入履歴の確認</p>
+<a asp-controller="Aeon" asp-action="ShowBuyItems">購入製品の一覧</a>
+
+
+<p>購入履歴の登録</p>
+<a asp-controller="Aeon" asp-action="GetMethod">GetMethod 呼び出し</a>
