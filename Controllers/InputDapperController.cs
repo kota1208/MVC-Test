@@ -20,13 +20,15 @@ namespace MVC_Test.Controllers
         public IActionResult DapperSelect()
         {
             //Dapperクラスを別に作成
-            List<ProductEntity> result =ProductDapper.GetProductAll();
+            //List<ProductEntity> result =ProductDapper.GetProductAll();
 
-            ProductEntity product = result[0];
+            List<CityEntity> result = ProductDapper.GetProductAll();
+            //ProductEntity product = result[0];
+            CityEntity city = result[0];
 
             ViewBag.result = result;
            
-            return View("Views/InputDapper/result.cshtml", product);;
+            return View("Views/InputDapper/result.cshtml", city);;
         }
 
 

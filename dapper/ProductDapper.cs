@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using MVC_Test.Models;
+using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 
 namespace MVC_Test.dapper
@@ -7,14 +8,20 @@ namespace MVC_Test.dapper
     public class ProductDapper
     {    
 
-        public static List<ProductEntity> GetProductAll()
+        public static List<CityEntity> GetProductAll()
         {
-            SqlConnection connection = SqlServerConnector.GetConnection();
+            //SqlConnection connection = SqlServerConnector.GetConnection();
+            MySqlConnection connection = MySqlConnectoer.GetConnection();
+
             //sql文
-            string sql = @"select *from product";
+            //string sql = @"select *from product";
+
+            //MySql との接続確認用のsql
+            string sql = "SELECT*FROM city";
 
             //sqlの実行
-            return connection.Query<ProductEntity>(sql).ToList();
+            //return connection.Query<ProductEntity>(sql).ToList();
+            return connection.Query<CityEntity>(sql).ToList();
 
         }
 

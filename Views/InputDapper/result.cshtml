@@ -1,5 +1,5 @@
 ﻿
-@model ProductEntity
+@model CityEntity
 @{
     //共通ページの無効化
     Layout = "CreateLayoutView";
@@ -8,16 +8,16 @@
 
 <table class="showTable">
     <tr>
-        <th class="showTableCol">商品名</th>
-        <th class="showTableCol">商品金額</th>
+        <th class="showTableCol">シティ番号</th>
+        <th class="showTableCol">シティ名</th>
     </tr>
     @{
         for(int i = 0; i < ViewBag.result.Count; i++)
         {
-            ProductEntity product = ViewBag.result[i];
+            CityEntity product = ViewBag.result[i];
             <tr>
-                <td class="showTableRow">@product.ProductName</td>
-                <td class="showTableRow">@product.ProductPrice</td>
+                <td class="showTableRow">@product.City_id</td>
+                <td class="showTableRow">@product.City</td>
             </tr>
 
           
